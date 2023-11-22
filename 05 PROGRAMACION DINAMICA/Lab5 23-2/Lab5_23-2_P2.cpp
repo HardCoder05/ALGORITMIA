@@ -29,20 +29,20 @@ int minDesperdicio(int capacidad, int pesos[ ], int n) {
 	
     int ganancia, encontre = 0;
     for (int j=capacidad ; j>=0 ; j--){
-	for (int i=n ; i>=0 ; i--){
-	      if (dp[i][j] == 0){
-		  ganancia = j;
-		  encontre = 1;
-		  break;
-	      }
-	}
-	
-	if (encontre){
-	   break;
-	}
+		for (int i=n ; i>=0 ; i--){
+		    if (dp[i][j] == 0){
+				ganancia = j;
+				encontre = 1;
+				break;
+		    }
+		}
+		
+		if (encontre){
+		   break;
+		}
     }
 	
-    cout<<endl<<"El contenedor mas grande con el desperdicio igual a 0 será de "<<ganancia<<" Toneladas.";
+    cout<<endl<<"El contenedor mas grande con el desperdicio igual a 0 sera de "<<ganancia<<" Toneladas.";
     
     return dp[n][capacidad];
 }
@@ -55,7 +55,7 @@ int main() {
     int pesos[n] = {3, 4, 8, 10};
 	
     int desperdicio = minDesperdicio(capacidad, pesos, n);
-    cout <<endl<< "El desperdicio de usar un contenedor de " << capacidad << " Toneladas será " 
+    cout <<endl<< "El desperdicio de usar un contenedor de " << capacidad << " Toneladas sera " 
 	    << desperdicio << " Toneladas." << endl;
 	
     return 0;
